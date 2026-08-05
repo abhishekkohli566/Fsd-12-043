@@ -13,7 +13,7 @@ function main (){
 
   setTimeout(f1,1000);
   setTimeout(f2,700);
-  //setInterval(f1,1000);
+setInterval(f1,1000);
 //   setImmediate(f2);
   process.nextTick(f3);
   console.log("end")
