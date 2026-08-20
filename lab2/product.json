@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "Notebook",
+    "price": 50.99,
+    "qty": 1
+  },
+  {
+    "id": 2,
+    "name": "pen",
+    "price": 6.99,
+    "qty": 1
+  },
+  {
+    "id": 3,
+    "name": "samosa",
+    "price": 10.99,
+    "qty": 1
+  }
+]
