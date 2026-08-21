@@ -7,3 +7,5 @@ one of the most important module in Node.js, originally designed for building sc
 3. BUild rest api
 4. Non-blocking I/O
 5. Foundation of Express.js
+
+- HTTP -> hyper text transfer protocol
