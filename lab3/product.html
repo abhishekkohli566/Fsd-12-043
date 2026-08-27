@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro — Supercharged for pros</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-main: #f5f5f7;
+            --text-secondary: #86868b;
+            --accent-blue: #2997ff;
+            --card-bg: #161617;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.47059;
+            letter-spacing: -0.022em;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 44px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-content {
+            width: 100%;
+            max-width: 980px;
+            padding: 0 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-title {
+            font-size: 21px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .btn-buy {
+            background: var(--accent-blue);
+            color: #fff;
+            padding: 4px 11px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero h2 {
+            color: #f5f5f7;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            background: linear-gradient(180deg, #fff 0%, #86868b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 28px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-weight: 500;
+        }
+
+        .hero-image-container {
+            margin-top: 60px;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .mockup-laptop {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #1e1e1e, #0a0a0a);
+            border-radius: 20px 20px 0 0;
+            border: 2px solid #333;
+            border-bottom: none;
+            box-shadow: 0 0 80px rgba(41, 151, 255, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mockup-screen-content {
+            width: 96%;
+            height: 94%;
+            background: #000;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: radial-gradient(circle at center, #1e293b 0%, #000 70%);
+        }
+
+        .chip-glow {
+            font-size: 100px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ff007f, #7928ca, #0070f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 4s infinite alternate;
+        }
+
+        .mockup-base {
+            width: 112%;
+            height: 16px;
+            background: #2d2d2d;
+            margin-left: -6%;
+            border-radius: 0 0 15px 15px;
+            border-top: 2px solid #444;
+            position: relative;
+        }
+
+        .mockup-base::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #1a1a1a;
+            border-radius: 0 0 4px 4px;
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 980px;
+            margin: 100px auto;
+            padding: 0 22px;
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .card h4 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.14;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 17px;
+            margin-top: 12px;
+        }
+
+        /* Specs Section */
+        .specs {
+            max-width: 980px;
+            margin: 100px auto;
+            padding: 0 22px;
+            text-align: center;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 60px;
+        }
+
+        .spec-item h5 {
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .spec-item p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 22px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; filter: blur(2px); }
+            100% { opacity: 1; filter: blur(0px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 48px; }
+            .hero p { font-size: 20px; }
+            .spec-grid { grid-template-columns: 1fr; gap: 30px; }
+            .mockup-laptop { height: 250px; }
+            .chip-glow { font-size: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <span class="nav-title">MacBook Pro</span>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#specs">Tech Specs</a>
+                <a href="#buy" class="btn-buy">Buy</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="overview">
+        <h2>M3 Max</h2>
+        <h1>Mind-blowing.<br>Head-turning.</h1>
+        <p>The most advanced chips ever built for a personal computer.</p>
+        
+        <div class="hero-image-container">
+            <div class="mockup-laptop">
+                <div class="mockup-screen-content">
+                    <div class="chip-glow">M3 MAX</div>
+                </div>
+            </div>
+            <div class="mockup-base"></div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <div>
+                <h3>Performance</h3>
+                <h4>Scary fast graphics rendering.</h4>
+            </div>
+            <p>Up to 2.5x faster rendering speeds than previous generation models.</p>
+        </div>
+        <div class="card">
+            <div>
+                <h3>Battery Life</h3>
+                <h4>Goes all day. And night.</h4>
+            </div>
+            <p>Up to 22 hours of continuous video playback. The longest battery life ever in a Mac.</p>
+        </div>
+        <div class="card">
+            <div>
+                <h3>Display</h3>
+                <h4>Liquid Retina XDR.</h4>
+            </div>
+            <p>Extreme Dynamic Range with 1600 nits peak brightness and 1,000,000:1 contrast ratio.</p>
+        </div>
+    </section>
+
+    <section class="specs" id="specs">
+        <h2>By the numbers</h2>
+        <div class="spec-grid">
+            <div class="spec-item">
+                <h5>16-Core</h5>
+                <p>CPU delivers extreme processing speed</p>
+            </div>
+            <div class="spec-item">
+                <h5>40-Core</h5>
+                <p>GPU for demanding graphical workflows</p>
+            </div>
+            <div class="spec-item">
+                <h5>128GB</h5>
+                <p>Unified memory for massive projects</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2026 Apple Inc. All rights reserved. Designed for demonstration purposes.</p>
+    </footer>
+
+</body>
+</html>
