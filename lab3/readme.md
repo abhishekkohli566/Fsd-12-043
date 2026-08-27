@@ -12,18 +12,25 @@ one of the most important module in Node.js, originally designed for building sc
 
 
 
-# codes
-- 200=ok
-- 201= created
-- 404= not found
-- 500
+## http status codes
 
+- 200 ->ok
+- 201 -created
+- 401 -> unothorise
+- 403 -> forbidden
+- 404 -> not found
+- 500 -> Internal server error
 
  # terminal command
   - npm init -y -> project biolerprate
   - npm i <packagename> -> install any package
   - npm unistall <packagename> unistall
    - npm i <packagename > -D
+
+   1. npm start 
+   - node program
+   2. npm run dev
+   - nodemon programname
 
 # npm- node package manager
 
